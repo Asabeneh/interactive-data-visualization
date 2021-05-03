@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>World Countries Data</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <style>
+      .names {
+  fill: none;
+  stroke: #fff;
+  stroke-linejoin: round;
+  }
+
+    /* Tooltip CSS */
+    .d3-tip {
+    line-height: 1.5;
+    font-weight: 400;
+    font-family:"avenir next", Arial, sans-serif;
+    padding: 6px;
+    background: rgba(0, 0, 0, 0.55);
+    color: #FFA500;
+    border-radius: 3px;
+    pointer-events: none;
+    position: absolute;
+    font-weight: 100;
+    }
+
+    /* Creates a small triangle extender for the tooltip */
+    .d3-tip:after {      
+      box-sizing: border-box;
+      display: inline;
+      font-size: 8px;
+      width: 100%;
+      line-height: 1.5;
+      color: rgba(0, 0, 0, 0.6);
+      position: absolute;
+      pointer-events: none;
+      
+    }
+
+    /* Northward tooltips */
+    .d3-tip.n:after {
+      content: "\25BC";
+      margin: -1px 0 0 0;
+      top: 100%;
+      left: 0;
+      text-align: center;
+    }
+
+    /* Eastward tooltips */
+    .d3-tip.e:after {
+      content: "\25C0";
+      margin: -4px 0 0 0;
+      top: 50%;
+      left: -8px;
+    }
+
+    /* Southward tooltips */
+    .d3-tip.s:after {
+      content: "\25B2";
+      margin: 0 0 1px 0;
+      top: -8px;
+      left: 0;
+      text-align: center;
+    }
+
+    /* Westward tooltips */
+    .d3-tip.w:after {
+      content: "\25B6";
+      margin: -4px 0 0 -1px;
+      top: 50%;
+      left: 100%;
+    }
+
+/*    text{
+      pointer-events:none;
+    }*/
+
+    .details{
+      color:white;
+    }
+    </style>
+  </head>
+
+  <body>
+    <header id="countries">
+      <h2>World Countries Data</h2>
+      <p class="subtitle"></p>
+      <p class="feedback"></p>
+    </header>
+    <main>
+      <div class="controls">
+        <input
+          class="search-input"
+          type="text"
+          placeholder="Search countries by name, city and languages"
+          autofocus
+        />
+
+        <div class="buttons">
+          <button class="name">
+            Name <i class="fas fa-long-arrow-alt-down name" disabled></i>
+          </button>
+          <button class="capital">
+            Capital <i class="fas fa-long-arrow-alt-down capital" disabled></i>
+          </button>
+          <button class="population">
+            Population
+            <i class="fas fa-long-arrow-alt-down population" disabled></i>
+          </button>
+          <a href="#stat"><i class="fas fa-chart-bar"></i></a>
+          <a href="#map"><i class="fas fa-globe-americas"></i></a>
+        </div>
+      </div>
+
+      <div class="countries-wrapper"></div>
+      <div class="wrapper">
+        <div class="graph-buttons">
+          <button class="population">Population</button>
+          <button class="languages">Languages</button>
+        </div>
+        <h4 class="graph-title"></h4>
+        <div class="graphs">
+          <div class="graph-wrapper" id="stat"></div>
+        </div>
+      </div>
+      <svg></svg>
+    </main>
+    <footer>
+      <div>
+        <h5>Developed by AY</h5>
+      </div>
+      <div>
+        <a href="#countries"><i class="fas fa-arrow-up"></i></a>
+      </div>
+    </footer>
+    <!--  D3.js -->
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://d3js.org/queue.v1.min.js"></script>
+<script src="https://d3js.org/topojson.v1.min.js"></script>
+<script src="d3-tip.js"></script>
+
+    <!-- end -->
+      <script src="./js/countries.js"></script>
+     <script src='./js/d3-map.js'></script>
+
+    <script src="./js/main.js"></script>
+   
+
+
+
+  </body>
+</html>
