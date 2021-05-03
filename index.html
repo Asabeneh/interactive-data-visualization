@@ -125,8 +125,14 @@
             Population
             <i class="fas fa-long-arrow-alt-down population" disabled></i>
           </button>
-          <a href="#stat"><i class="fas fa-chart-bar"></i></a>
-          <a href="#map"><i class="fas fa-globe-americas"></i></a>
+          <div>
+             <a href="#stat"><i class="fas fa-chart-bar"></i></a>
+          </div>
+          <div>
+            <a href="#map" style="margin-left:10px"><i class="fas fa-globe-americas"></i></a>
+          </div>
+         
+          
         </div>
       </div>
 
@@ -141,7 +147,7 @@
           <div class="graph-wrapper" id="stat"></div>
         </div>
       </div>
-      <svg></svg>
+      <svg id='map'></svg>
     </main>
     <footer>
       <div>
@@ -158,13 +164,9 @@
 <script src="d3-tip.js"></script>
 
     <!-- end -->
-      <script src="./js/countries.js"></script>
-     <script src='./js/d3-map.js'></script>
-
+    <script src="./js/countries.js"></script>
+    <script src='./js/d3-map.js'></script>
     <script src="./js/main.js"></script>
    
-
-
-
   </body>
 </html>
