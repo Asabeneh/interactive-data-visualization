@@ -21,6 +21,10 @@
     />
 
     <link rel="stylesheet" href="./css/style.css" />
+    
+    <!-- <link href="/css/reset.css" rel="stylesheet" />
+    <link href="/css/stylesheet.css" rel="stylesheet" /> -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200|Open+Sans" rel="stylesheet" />
     <style>
       .names {
   fill: none;
@@ -147,7 +151,18 @@
           <div class="graph-wrapper" id="stat"></div>
         </div>
       </div>
-      <svg id='map'></svg>
+      <div id="map">
+        <div class="map-buttons">
+          <button class="population-map-button">Population</button>
+          <button class="happiness-map-button">Happiness</button>
+        </div>
+        <div id="slider">
+          <input name="year" type="range" min="2015" max="2020" id="year-slider" value="2020">
+          <h3 id="selected-year">Year 2020</h3>
+        </div>
+        <svg></svg>
+      </div>
+      
     </main>
     <footer>
       <div>
@@ -166,6 +181,7 @@
     <!-- end -->
     <script src="./js/countries.js"></script>
     <script src='./js/d3-map.js'></script>
+    <script src ='./js/happiness-map.js'></script>
     <script src="./js/main.js"></script>
    
   </body>

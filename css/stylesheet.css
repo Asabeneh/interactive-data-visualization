@@ -1,0 +1,105 @@
+body, html {
+  width: 100%;
+}
+
+html {
+  background-color: #c7c7c7;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: #F6EFE8;
+  min-height:100vh;
+  font-family: 'Raleway', sans-serif;
+  position: relative;
+}
+
+h1 {
+  font-size: 30px;
+  margin: 30px 0px 10px 0px;
+  letter-spacing: 1px;
+}
+
+#map {
+  background-color: #c7c7c7;
+  position: relative;
+}
+
+.country {
+  stroke: #c7c7c7;
+  stroke-width: 0.5;
+}
+
+.tooltip {
+  background: #eee;
+  box-shadow: 0 0 5px #999999;
+  color: #333;
+  display: none;
+  font-size: 12px;
+  left: 130px;
+  opacity: 0;
+  padding: 10px;
+  position: absolute;
+  top: 95px;
+  width: fit-content;
+  z-index: 10;
+}
+
+.country-label {
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.legend-title {
+  width: fit-content;
+  color: #26272B;
+  position: absolute;
+  font-size: 12px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#year-slider {
+  direction: rtl;
+  width: 120px;
+  height: 10px;
+  position: absolute;
+  top: 490px;
+  left: 55px;
+}
+
+#selected-year {
+  position: absolute;
+  color: #26272B;
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  top: 490px;
+  left: 85px;
+}
+
+input[type=range]{
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: #E76F00;
+  margin-top: -4px;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 120px;
+  height: 5px;
+  background: #e8e8e8;
+  border: none;
+  border-radius: 3px;
+}

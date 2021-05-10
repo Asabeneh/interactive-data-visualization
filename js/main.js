@@ -278,3 +278,18 @@ graphButtons.addEventListener('click', e => {
   } else {
   }
 })
+
+const mapButtons = document.querySelector('.map-buttons')
+const slider = document.querySelector('#slider')
+mapButtons.addEventListener('click', (e) => {
+  console.log(e.target.className)
+  if(e.target.className == 'population-map-button'){
+    slider.style.display = 'none'
+    createD3Map()
+  } else if(e.target.className =='happiness-map-button'){
+    slider.style.display = 'block'
+    happinessMap()
+  } else {
+    ;
+  }
+})

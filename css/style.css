@@ -60,12 +60,12 @@ input {
   background: rgb(250, 246, 246);
 }
 
-input:hover, input:focus {
+.search-input:hover, .search-input:focus {
   box-shadow: 0 0 0.1rem 0.1rem rgb(236, 230, 230);
   background: rgb(250, 246, 246);
 }
 
-input::placeholder {
+.search-input::placeholder {
   font-size: 2rem;
   font-weight: 100;
   opacity: 0.65;
@@ -137,7 +137,7 @@ img {
   font-weight: 600;
 }
 
-.buttons {
+.buttons, .map-buttons {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -145,7 +145,7 @@ img {
   position: relative;
 }
 
-.buttons button {
+.buttons button, .map-buttons button {
   display: inline-block;
   width: 18rem;
   height: 4.5rem;
@@ -277,7 +277,9 @@ footer {
   font-weight: bolder;
 }
 
-
+#slider {
+  display: none;
+}
 @media (max-width: 600px) {
   body {
     margin: 0.5rem;
@@ -286,12 +288,12 @@ footer {
     font-size: 2.5rem;
     letter-spacing: 0.25rem;
   }
-  input {
+  .search-input {
     width: 100%;
     font-size: 2rem;
     border-radius: 0.2rem;
   }
-  input::placeholder {
+  .search-input::placeholder {
     font-size: 1.35rem;
   }
   .buttons {
